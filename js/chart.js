@@ -1,5 +1,6 @@
 //Trying out google charts *Nick V*
-
+var fordata = 3;
+var againstdata = 1;
 // Load the Visualization API and the piechart package.
       google.charts.load('current', {'packages':['corechart']});
 
@@ -10,8 +11,7 @@
       // instantiates the pie chart, passes in the data and
       // draws it.
       function drawChart() {
-        var fordata = 3;
-        var againstdata = 1;
+
       // Create the data table.
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'What people are saying');

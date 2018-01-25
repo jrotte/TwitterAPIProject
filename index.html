@@ -50,9 +50,9 @@
 
             <form>
               <div class="form-group">
-                <input type="password" class="form-control" id="tweetSubject" placeholder="Find a Challenging Subject">
+                <input type="password" class="form-control" id="tweetSubjectPseudo" placeholder="Find a Challenging Subject">
               </div>
-              <button type="submit" class="btn btn-primary" id="submitTweetSubject">Submit</button>
+              <button type="submit" class="btn btn-primary" id="submitTweetSubjectPseudo">Submit</button>
             </form>
           </div>
         </div>
@@ -60,7 +60,7 @@
 
       <!--Trying out Google Charts-->
       <div class="card" id="loadTwitter">
-        <h5 class="card-header">Featured</h5>
+        <h5 class="card-header">Data about this subject:<span id="googleChartHeader">subject</span></h5>
         <div class="card-body">
           <div class="container">
             <div class="row">
@@ -74,17 +74,16 @@
 
       <!--Twitter API content goes in these buckets-->
       <div class="card" id="loadTwitter">
-        <h5 class="card-header">Featured</h5>
+        <h5 class="card-header">Tweets about:<span id="tweetSubjectHeader">subject</span></h5>
         <div class="card-body">
           <div class="container">
             <div class="row">
+
               <div class="col-sm" id="loadTweetsLeft">
-                <a class="twitter-timeline"  href="https://twitter.com/hashtag/paulblart" data-widget-id="956331726120390658">#paulblart Tweets</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  <h5>Tweets FOR this subject</h5>
               </div>
               <div class="col-sm" id="loadTweetsRight">
-                <a class="twitter-timeline"  href="https://twitter.com/hashtag/paulblart" data-widget-id="956331726120390658">#paulblart Tweets</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  <h5>Tweets AGAINST this subject</h5>
               </div>
             </div>
           </div>
@@ -115,9 +114,33 @@
       </div>
     <!--Container End-->
     </div>
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Search a challenging subject:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <input type="password" class="form-control" id="tweetSubject" placeholder="Find a Challenging Subject">
+              </div>
+              <button type="submit" class="btn btn-primary" id="submitTweetSubject">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">Made by John Rotte, Dennis Huh and Nick Volkert</span>
+        <span>Made by John Rotte, Dennis Huh and Nick Volkert</span>
       </div>
     </footer>
     <!-- Optional JavaScript -->
