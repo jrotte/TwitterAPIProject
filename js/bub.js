@@ -40,14 +40,22 @@ function myLocationCurtain(){
             $("#intCurtain").hide();
           }, 3000);
      }
-
+var userSearch = $("#tweetSubject").val().trim();
 $("#submitTweetSubject").on("click", function(event) {
   // Prevent default behavior
   event.preventDefault();
   //Comment or Uncomment this for the loading overlay - Nick
   myLocationCurtain();
   //pushes search term to header of block below input - Nick
-  var userSearch = $("#tweetSubject").val().trim();
+  userSearch;
   $("#tweetSubjectHeader").text(userSearch);
   $("#carouselId").hide();
 });
+
+$.post(
+    'https://apiv2.indico.io/sentiment',
+    JSON.stringify({
+      "api_key": "cdf3dbb688a5bea7f94cd89da7a4e3a9",
+      "data": userSearch,
+    })
+  ).then(function(res) { console.log(res) });

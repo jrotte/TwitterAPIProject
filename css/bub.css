@@ -1,17 +1,26 @@
 body{
   background-color: #041f26;
 }
+
+.card,
+.carousel,
+.jumbotron{
+  border-radius: 5px;
+}
+.form-control,
+.btn{
+  border-radius: 3px;
+}
+
 .card,
 .carousel {
   margin-bottom: 30px;
-  border-radius: 5px;
 }
 .jumbotron {
     padding: 4rem 4rem;
     background-color: #073642;
     color:#839496;
     margin: 30px 0;
-    border-radius: 5px;
 }
 #loadTweetsLeft h5,
 #loadTweetsRight h5{
