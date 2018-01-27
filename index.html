@@ -50,16 +50,16 @@
 
             <form>
               <div class="form-group">
-                <input type="password" class="form-control" id="tweetSubjectPseudo" placeholder="Find a Challenging Subject">
+                <input type="text" class="form-control" id="tweetSubject" placeholder="Find a Challenging Subject">
               </div>
-              <button type="submit" class="btn btn-primary" id="submitTweetSubjectPseudo">Submit</button>
+              <button type="submit" class="btn btn-primary" id="submitTweetSubject">Submit</button>
             </form>
           </div>
         </div>
       </div>
 
       <!--Trying out Google Charts-->
-      <div class="card" id="loadTwitter">
+      <!-- <div class="card" id="googleChartDiv">
         <h5 class="card-header">Data about this subject:<span id="googleChartHeader">subject</span></h5>
         <div class="card-body">
           <div class="container">
@@ -70,7 +70,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!--Twitter API content goes in these buckets-->
       <div class="card" id="loadTwitter">
@@ -114,7 +114,14 @@
       </div>
     <!--Container End-->
     </div>
-    <div class="modal" tabindex="-1" role="dialog">
+    <footer class="footer">
+      <div class="container">
+        <span>Made by John Rotte, Dennis Huh and Nick Volkert</span>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="submitTweetSubjectPseudo" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -138,18 +145,15 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="container">
-        <span>Made by John Rotte, Dennis Huh and Nick Volkert</span>
-      </div>
-    </footer>
-    <!-- Optional JavaScript -->
+    <div class="loader"></div>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/bub.js"></script>
-    <script type="text/javascript" src="js/chart.js"></script>
+    <!-- <script type="text/javascript" src="js/chart.js"></script> -->
   </body>
 </html>
