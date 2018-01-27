@@ -1,12 +1,25 @@
+body{
+  background-color: #041f26;
+}
 .card,
 .carousel {
   margin-bottom: 30px;
 }
-
-footer{
-  background-color: gray;
-  color:#FFF;
+.jumbotron {
+    padding: 4rem 4rem;
+    background-color: #073642;
+    color:#839496;
+    margin-bottom: 30px;
+}
+#loadTweetsLeft h5,
+#loadTweetsRight h5{
   text-align: center;
+}
+footer{
+  background-color: #073642;
+  color:#839496;
+  text-align: center;
+  padding: 30px 0;
 }
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
