@@ -34,12 +34,11 @@ database.ref().on("value", function(snapshot) {
 function myLocationCurtain(){
           locationCurtainDiv = $('<div id="intCurtain"><div class="loader"></div></div>');
           console.log("modal fire is working");
-          if($("#intCurtain").length<=0){
-            $(locationCurtainDiv).insertBefore('#intContainer');
-          }else{
-            if($("#intCurtain").length>0)
-            $("#intCurtain").remove();
-          }
+          $("#intContainer").html(locationCurtainDiv);
+          $("#intCurtain").show();
+          setTimeout(function(){
+            $("#intCurtain").hide();
+          }, 3000);
      }
 
 $("#submitTweetSubject").on("click", function(event) {
