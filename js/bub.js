@@ -30,8 +30,21 @@ database.ref().on("value", function(snapshot) {
 
 // --------------------------------------------------------------
 
+//this doesn't work but would be the modal when a search is performed - Nick
+function myLocationCurtain(){
+          locationCurtainDiv = $('<div id="intCurtain"><div class="loader"></div></div>');
+          console.log("modal fire is working");
+          if($("#intCurtain").length<=0){
+            $(locationCurtainDiv).insertBefore('#intContainer');
+          }else{
+            if($("#intCurtain").length>0)
+            $("#intCurtain").remove();
+          }
+     }
+
 $("#submitTweetSubject").on("click", function(event) {
   // Prevent default behavior
   event.preventDefault();
-  
+  myLocationCurtain();
+
 });
