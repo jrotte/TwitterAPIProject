@@ -40,22 +40,48 @@ function myLocationCurtain(){
             $("#intCurtain").hide();
           }, 3000);
      }
-var userSearch = $("#tweetSubject").val().trim();
-$("#submitTweetSubject").on("click", function(event) {
+
+$("#run-search").on("click", function(event) {
   // Prevent default behavior
   event.preventDefault();
+
+  searchTerm = $("#search-term").val().trim();
+  var searchURL = queryURLBase + searchTerm;
+  runQuery(searchURL);
+
   //Comment or Uncomment this for the loading overlay - Nick
   myLocationCurtain();
   //pushes search term to header of block below input - Nick
-  userSearch;
-  $("#tweetSubjectHeader").text(userSearch);
+  
+  $("#tweetSubjectHeader").text(searchTerm);
   $("#carouselId").hide();
 });
+
+var searchTerm = "";
+var queryURLBase = "http://207.229.138.9:3000/tweets/";
+
+function runQuery(queryURL) {
+
+  // The AJAX function uses the queryURL and GETS the JSON data associated with it.
+  // The data then gets stored in the variable called: "NYTData"
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(tweetData) {
+    // Logging the URL so we have access to it for troubleshooting
+    console.log(tweetData);
+    console.log("------------------------------------");
+    console.log("URL: " + queryURL);
+    console.log("------------------------------------");
+  });
+}
+
 
 $.post(
     'https://apiv2.indico.io/sentiment',
     JSON.stringify({
       "api_key": "cdf3dbb688a5bea7f94cd89da7a4e3a9",
-      "data": userSearch,
+      "data": searchTerm,
     })
   ).then(function(res) { console.log(res) });

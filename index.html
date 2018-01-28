@@ -49,12 +49,18 @@
         <div class="card-body">
           <div class="panel-body">
 
-            <form>
+            <!-- <form>
               <div class="form-group">
                 <input type="text" class="form-control" id="tweetSubject" placeholder="Find a Challenging Subject">
               </div>
               <button type="submit" class="btn btn-primary" id="submitTweetSubject">Submit</button>
-            </form>
+            </form> -->
+
+            <form role="form">
+                	<label for="search">Search Term:</label>
+                	<input type="text" class="form-control" id="search-term" placeholder="Find a Challenging Subject">
+        			    <button type="submit" class="btn btn-primary" id="run-search"><i class="fa fa-search"></i> Search</button>
+        		</form>
           </div>
         </div>
       </div>
@@ -121,31 +127,6 @@
       </div>
     </footer>
 
-    <!-- Modals -->
-    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="submitTweetSubjectPseudo" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Search a challenging subject:</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <input type="password" class="form-control" id="tweetSubject" placeholder="Find a Challenging Subject">
-              </div>
-              <button type="submit" class="btn btn-primary" id="submitTweetSubject">Submit</button>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="intContainer"></div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -153,8 +134,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- data-main attribute tells require.js to load
+             js/server.js after require.js loads. -->
+        <!-- <script data-main="scripts/main" src="js/require.js"></script> -->
+        <script data-main="js/server" src="js/require_commented.js"></script>
+
+    <script type="text/javascript" src="js/server.js"></script>
     <script type="text/javascript" src="js/bub.js"></script>
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
     <!-- <script type="text/javascript" src="js/chart.js"></script> -->
   </body>
 </html>
