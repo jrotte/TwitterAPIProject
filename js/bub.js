@@ -52,7 +52,7 @@ $("#run-search").on("click", function(event) {
   //Comment or Uncomment this for the loading overlay - Nick
   myLocationCurtain();
   //pushes search term to header of block below input - Nick
-  
+
   $("#tweetSubjectHeader").text(searchTerm);
   $("#carouselId").hide();
 });
@@ -66,15 +66,26 @@ function runQuery(queryURL) {
   // The data then gets stored in the variable called: "NYTData"
 
   $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(tweetData) {
-    // Logging the URL so we have access to it for troubleshooting
-    console.log(tweetData);
-    console.log("------------------------------------");
-    console.log("URL: " + queryURL);
-    console.log("------------------------------------");
-  });
+  url: queryURL,
+  method: "GET"
+}).then(function(tweetData) {
+  // Logging the URL so we have access to it for troubleshooting
+  console.log(tweetData);
+  console.log("------------------------------------");
+  console.log("URL: " + queryURL);
+  console.log("------------------------------------");
+  for (var i = 0; i < tweetData.length; i++) {
+    console.log(i);
+    console.log(tweetData[i].text);
+     var tweetAuthorImage = $("<img>");
+     tweetAuthorImage.attr("src", tweetData[i].user.profile_image_url_https);
+     var tweetDivLoc = $("#loadLeft");
+     var tweetAuthor = $("<div class='userTweet'><div class='userImage'>" + tweetAuthorImage + "</div><p>" + (tweetData[i].user.name) + "</p>" + "<div class='tweet'><p>" + (tweetData[i].text) + "</div>");
+     var tweetText = $("<div class='tweet'><p>" + (tweetData[i].text) + "</div>");
+     // Append the newly created table data to the table row
+     tweetDivLoc.append(tweetAuthor);
+  }
+});
 }
 
 

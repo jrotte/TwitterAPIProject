@@ -25,6 +25,14 @@ body{
 #loadTweetsLeft h5,
 #loadTweetsRight h5{
   text-align: center;
+  margin: 10px 0 20px 0;
+}
+#loadLeft,
+#loadRight{
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 footer{
   background-color: #073642;
@@ -57,4 +65,17 @@ footer{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+.userTweet{
+  background-color:#FFF;
+  width:100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 auto 20px auto;
+}
+.userImage{
+
+}
+.tweet{
+
 }
