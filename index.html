@@ -44,40 +44,157 @@
         </a>
       </div>
 
+      <!--Curated Tweets-->
+      <!--Net Neutrality-->
+      <div class="card" id="netNeutTweets">
+        <h5 class="card-header">Curated Tweets about: Net Neutrality</h5>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm" id="loadTweetsLeft">
+                  <h5>Tweets FOR Net Neutrality</h5>
+                  <div class="loadLeft">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+              <div class="col-sm" id="loadTweetsRight">
+                  <h5>Tweets AGAINST Net Neutrality</h5>
+                  <div class="loadRight">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--SuperBowl-->
+      <div class="card" id="superBowlTweets">
+        <h5 class="card-header">Curated Tweets about: The Superbowl</h5>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm" id="loadTweetsLeft">
+                  <h5>Tweets FOR The Super Bowl</h5>
+                  <div class="loadLeft">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+              <div class="col-sm" id="loadTweetsRight">
+                  <h5>Tweets AGAINST The Super Bowl</h5>
+                  <div class="loadRight">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Mueller Investigation-->
+      <div class="card" id="muellerTweets">
+        <h5 class="card-header">Curated Tweets about: Mueller Investigation</h5>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm" id="loadTweetsLeft">
+                  <h5>Tweets FOR The Mueller Investigation</h5>
+                  <div class="loadLeft">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+              <div class="col-sm" id="loadTweetsRight">
+                  <h5>Tweets AGAINST The Mueller Investigation</h5>
+                  <div class="loadRight">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--New California-->
+      <div class="card" id="newCaliTweets">
+        <h5 class="card-header">Curated Tweets about: New California</h5>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm" id="loadTweetsLeft">
+                  <h5>Tweets FOR New California</h5>
+                  <div class="loadLeft">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+              <div class="col-sm" id="loadTweetsRight">
+                  <h5>Tweets AGAINST New California</h5>
+                  <div class="loadRight">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Paul Blart-->
+      <div class="card" id="blartTweets">
+        <h5 class="card-header">Curated Tweets about: Paul Blart</h5>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm" id="loadTweetsLeft">
+                  <h5>Tweets FOR Paul Blart</h5>
+                  <div class="loadLeft">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+              <div class="col-sm" id="loadTweetsRight">
+                  <h5>Tweets AGAINST Paul Blart</h5>
+                  <div class="loadRight">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Cort and Tish-->
+      <div class="card" id="cortTweets">
+        <h5 class="card-header">Curated Tweets about: Cort and Tish RoseBowl Parade</h5>
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm" id="loadTweetsLeft">
+                  <h5>Tweets FOR Cort and Tish</h5>
+                  <div class="loadLeft">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+              <div class="col-sm" id="loadTweetsRight">
+                  <h5>Tweets AGAINST Cort and Tish</h5>
+                  <div class="loadRight">
+                    <!--tweets go here-->
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="card" id="searchSubjects">
         <h5 class="card-header">Featured</h5>
         <div class="card-body">
           <div class="panel-body">
-
-            <!-- <form>
-              <div class="form-group">
-                <input type="text" class="form-control" id="tweetSubject" placeholder="Find a Challenging Subject">
-              </div>
-              <button type="submit" class="btn btn-primary" id="submitTweetSubject">Submit</button>
-            </form> -->
-
             <form role="form">
-                	<label for="search">Search Term:</label>
+                	<label for="search" id="form-header">Search Term:</label>
                 	<input type="text" class="form-control" id="search-term" placeholder="Find a Challenging Subject">
         			    <button type="submit" class="btn btn-primary" id="run-search"><i class="fa fa-search"></i> Search</button>
         		</form>
           </div>
         </div>
       </div>
-
-      <!--Trying out Google Charts-->
-      <!-- <div class="card" id="googleChartDiv">
-        <h5 class="card-header">Data about this subject:<span id="googleChartHeader">subject</span></h5>
-        <div class="card-body">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm" id="googleChart">
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
 
       <!--Twitter API content goes in these buckets-->
       <div class="card" id="loadTwitter">
@@ -88,13 +205,13 @@
 
               <div class="col-sm" id="loadTweetsLeft">
                   <h5>Tweets FOR this subject</h5>
-                  <div id="loadLeft">
+                  <div id="loadLeft" class="loadLeft">
                     <!--tweets go here-->
                   </div>
               </div>
               <div class="col-sm" id="loadTweetsRight">
                   <h5>Tweets AGAINST this subject</h5>
-                  <div id="loadRight">
+                  <div id="loadRight" class="loadRight">
                     <!--tweets go here-->
                   </div>
               </div>
@@ -109,17 +226,17 @@
           <div class="container">
             <div class="row">
               <div class="col-sm">
-                <p><a href="javascript:;">#netneutrality</a></p>
-                <p><a href="javascript:;">#superbowl</a></p>
+                <p><a href="javascript:;" id="netneut">#netneutrality</a></p>
+                <p><a href="javascript:;" id="superBowl">#superbowl</a></p>
 
               </div>
               <div class="col-sm">
-                <p><a href="javascript:;">#muellerinvestigation</a></p>
-                <p><a href="javascript:;">#newcalifornia</a></p>
+                <p><a href="javascript:;" id="muellerInvs">#muellerinvestigation</a></p>
+                <p><a href="javascript:;" id="newCali">#newcalifornia</a></p>
               </div>
               <div class="col-sm">
-                <p><a href="javascript:;">#paulblart</a></p>
-                <p><a href="javascript:;">#cordandtish</a></p>
+                <p><a href="javascript:;" id="blart">#paulblart</a></p>
+                <p><a href="javascript:;" id="cort">#cordandtish</a></p>
               </div>
             </div>
           </div>

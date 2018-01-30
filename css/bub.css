@@ -27,8 +27,8 @@ body{
   text-align: center;
   margin: 10px 0 20px 0;
 }
-#loadLeft,
-#loadRight{
+.loadLeft,
+.loadRight{
   background-color: #f7f7f7;
   padding: 20px;
   border-radius: 5px;
@@ -66,6 +66,34 @@ footer{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+/* Curate Tweets */
+#cortTweets,
+#blartTweets,
+#newCaliTweets,
+#muellerTweets,
+#superBowlTweets,
+#netNeutTweets{
+  display: none;
+}
+
+#form-header,
+#search-term,
+#run-search{
+  float:left;
+}
+
+#form-header{
+
+}
+#search-term{
+  clear: left;
+  width: 90%;
+  margin: 0 20px 20px 0;
+}
+#run-search{
+
+}
+
 .userTweet{
   background-color:#FFF;
   width:100%;

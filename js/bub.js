@@ -14,13 +14,6 @@ firebase.initializeApp(config);
 
 // Create a variable to reference the database
 var database = firebase.database();
-
-
-// --------------------------------------------------------------
-
-
-// At the initial load and subsequent value changes, get a snapshot of the stored data.
-// This function allows you to update your page in real-time when the firebase database changes.
 database.ref().on("value", function(snapshot) {
 
 
@@ -57,6 +50,31 @@ $("#run-search").on("click", function(event) {
   $("#carouselId").hide();
 });
 
+$("#netneut").on("click", function(){
+  $("#carouselId").hide();
+  $("#netNeutTweets").show();
+});
+$("#muellerInvs").on("click", function(){
+  $("#carouselId").hide();
+  $("#muellerTweets").show();
+});
+$("#blart").on("click", function(){
+  $("#carouselId").hide();
+  $("#blartTweets").show();
+});
+$("#superBowl").on("click", function(){
+  $("#carouselId").hide();
+  $("#superBowlTweets").show();
+});
+$("#newCali").on("click", function(){
+  $("#carouselId").hide();
+  $("#newCaliTweets").show();
+});
+$("#cort").on("click", function(){
+  $("#carouselId").hide();
+  $("#cortTweets").show();
+});
+
 var searchTerm = "";
 var queryURLBase = "http://207.229.138.9:3000/tweets/";
 
@@ -69,7 +87,7 @@ function runQuery(queryURL) {
   url: queryURL,
   method: "GET"
 }).then(function(tweetData) {
-  // Logging the URL so we have access to it for troubleshooting
+  // Logging the URL so we have access to it for troubleshooting - Dennis
   console.log(tweetData);
   console.log("------------------------------------");
   console.log("URL: " + queryURL);
