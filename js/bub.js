@@ -38,7 +38,7 @@ $("#run-search").on("click", function(event) {
   // Prevent default behavior
   event.preventDefault();
 
-  searchTerm = $("#search-term").val().trim();
+  var searchTerm = $("#search-term").val().trim();
   var searchURL = queryURLBase + searchTerm;
   runQuery(searchURL);
 
@@ -48,6 +48,15 @@ $("#run-search").on("click", function(event) {
 
   $("#tweetSubjectHeader").text(searchTerm);
   $("#carouselId").hide();
+
+  $.post(
+    'https://apiv2.indico.io/twitterengagement',
+    JSON.stringify({
+      "api_key": "cdf3dbb688a5bea7f94cd89da7a4e3a9",
+      "data": searchTerm,
+    })
+  ).then(function(res) { console.log(res) });
+
 });
 
 $("#netneut").on("click", function(){
@@ -105,12 +114,3 @@ function runQuery(queryURL) {
   }
 });
 }
-
-
-$.post(
-    'https://apiv2.indico.io/sentiment',
-    JSON.stringify({
-      "api_key": "cdf3dbb688a5bea7f94cd89da7a4e3a9",
-      "data": searchTerm,
-    })
-  ).then(function(res) { console.log(res) });
